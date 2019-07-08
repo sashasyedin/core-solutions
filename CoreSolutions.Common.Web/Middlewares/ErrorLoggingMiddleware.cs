@@ -61,6 +61,7 @@ namespace CoreSolutions.Common.Web.Middlewares
             var result = JsonConvert.SerializeObject(obj);
 
             context.Response.ContentType = Constants.ApplicationJson;
+
             context.Response.StatusCode = exception is ArgumentException
                 ? StatusCodes.Status400BadRequest
                 : StatusCodes.Status500InternalServerError;
