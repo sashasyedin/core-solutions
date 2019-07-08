@@ -57,18 +57,13 @@ namespace CoreSolutions.Common.Web.Middlewares
         /// </returns>
         private static async Task HandleExceptionAsync(HttpContext context, Exception exception)
         {
-            var code = StatusCodes.Status500InternalServerError;
-
-            if (exception is ArgumentException || exception is ArgumentNullException)
-            {
-                code = StatusCodes.Status400BadRequest;
-            }
-
             var obj = new { errorMessage = exception.Message };
             var result = JsonConvert.SerializeObject(obj);
 
             context.Response.ContentType = Constants.ApplicationJson;
-            context.Response.StatusCode = code;
+            context.Response.StatusCode = exception is ArgumentException
+                ? StatusCodes.Status400BadRequest
+                : StatusCodes.Status500InternalServerError;
 
             await context.Response.WriteAsync(result);
         }
