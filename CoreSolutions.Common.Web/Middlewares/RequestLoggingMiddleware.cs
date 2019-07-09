@@ -25,8 +25,8 @@ namespace CoreSolutions.Common.Web.Middlewares
             RequestDelegate next,
             ILogger<RequestLoggingMiddleware> logger)
         {
-            _next = next;
-            _logger = logger;
+            _next = next.ThrowIfNull(nameof(next));
+            _logger = logger.ThrowIfNull(nameof(logger));
         }
 
         /// <summary>

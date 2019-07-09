@@ -23,8 +23,8 @@ namespace CoreSolutions.Common.Web.Middlewares
             RequestDelegate next,
             ILogger<ErrorLoggingMiddleware> logger)
         {
-            _next = next;
-            _logger = logger;
+            _next = next.ThrowIfNull(nameof(next));
+            _logger = logger.ThrowIfNull(nameof(logger));
         }
 
         /// <summary>
