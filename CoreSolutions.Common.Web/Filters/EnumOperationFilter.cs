@@ -1,7 +1,7 @@
 ﻿using CoreSolutions.Common.Attributes;
 using CoreSolutions.Common.Models;
 using Microsoft.AspNetCore.Mvc;
-using Swashbuckle.AspNetCore.Swagger;
+using Microsoft.OpenApi.Models;
 using Swashbuckle.AspNetCore.SwaggerGen;
 using System;
 using System.Collections.Generic;
@@ -22,7 +22,7 @@ namespace CoreSolutions.Common.Web.Filters
         /// </summary>
         /// <param name="operation">The operation.</param>
         /// <param name="context">The context.</param>
-        public void Apply(Operation operation, OperationFilterContext context)
+        public void Apply(OpenApiOperation operation, OperationFilterContext context)
         {
             var parameters = context.ApiDescription.ActionDescriptor.Parameters;
 
