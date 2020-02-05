@@ -1,4 +1,5 @@
-﻿using CoreSolutions.Common.Enum;
+﻿using CoreSolutions.Common.Attributes;
+using CoreSolutions.Common.Models;
 using Microsoft.AspNetCore.Mvc;
 using Swashbuckle.AspNetCore.Swagger;
 using Swashbuckle.AspNetCore.SwaggerGen;

@@ -3,7 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Reflection;
 
-namespace CoreSolutions.Common.Enum
+namespace CoreSolutions.Common.Models
 {
     /// <summary>
     /// Base class for all enumerations.

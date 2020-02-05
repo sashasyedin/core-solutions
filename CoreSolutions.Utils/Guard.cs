@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using System.Linq;
 
-namespace CoreSolutions.Common
+namespace CoreSolutions.Utils
 {
     /// <summary>
     /// Guard clauses.

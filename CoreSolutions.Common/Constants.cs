@@ -1,10 +1,9 @@
 ﻿namespace CoreSolutions.Common
 {
     /// <summary>
-    /// Shared constants.
+    /// Shared application constants.
     /// </summary>
     public static class Constants
     {
-        public const string ApplicationJson = "application/json";
     }
 }

@@ -1,6 +1,6 @@
 ﻿using System;
 
-namespace CoreSolutions.Common.Enum
+namespace CoreSolutions.Common.Attributes
 {
     /// <summary>
     /// An attribute exposing an Enumeration value.
